@@ -1,0 +1,11 @@
+[user]
+	name = 100tch
+	email =
+[core]
+	editor = vim	
+[alias]
+	last = log -1 HEAD
+	st = status -s
+	br = branch
+	fl = log -u
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
