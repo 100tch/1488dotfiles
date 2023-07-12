@@ -12,7 +12,7 @@ super + @space
 
 # make screenshots
 Print
-	$HOME/.local/bin/screenshot.sh -s $HOME/Media/screenshot/
+	$HOME/.local/bin/screenshot.sh -s $SCREENSHOT_DIR
 
 # make sxhkd reload its configuration files:
 super + Escape

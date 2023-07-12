@@ -31,5 +31,5 @@ bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Gzdoom state=floating focus=off
 
 setxkbmap -layout us,ru -option grp:alt_shift_toggle      # keymaps
-feh --bg-fill $HOME/Media/default.jpg                     # background
+feh $WALLPAPER_SET                                        # wallpaper
 $HOME/.config/polybar/launch.sh                           # status bar

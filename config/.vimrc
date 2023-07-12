@@ -29,4 +29,4 @@ set hlsearch
 set incsearch
 set title
 
-let g:vimwiki_list = [{"path": "~/.local/vimwiki/"}]
+let g:vimwiki_list = [{"path": $VIMWIKI_DIR}]
