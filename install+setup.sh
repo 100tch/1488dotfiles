@@ -56,11 +56,12 @@ for file in "$local_bin"/*; do
 			mv -v "$target_file" "$target_file.bak"
 		fi
 		cp "$file" "$target_bin"
+		echo "Created a copy of the file $filename in $target_bin"
 	fi
 done
 
 # Installing additional dependencies or plugins
-mkdir -p .vim/autoload/ .vim/plugged
-curl -o .vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir -p $HOME/.vim/autoload/ $HOME/.vim/plugged
+curl -o $HOME/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "Installation completed."
