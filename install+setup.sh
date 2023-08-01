@@ -18,7 +18,7 @@ config_dir=$HOME/.dotfiles/config
 # Getting a list of configuration files
 dotfiles=()
 while IFS= read -r -d '' file; do
-  dotfiles+=("$file")
+	dotfiles+=("$file")
 done < <(find $config_dir -type f -print0)
 
 # Backup existing dotfiles
@@ -38,6 +38,8 @@ done
 # Creating symbolic links to dotfiles
 for file in "${dotfiles[@]}"; do
 	relative_path="${file#$config_dir/}"
+	relative_path_without_file=$(dirname "$relative_path")
+	mkdir -p $HOME/$relative_path_without_file
 	filename=$(basename "$file")
 	ln -s $file $HOME/$relative_path
 	echo "Created a symbolic link for $filename"
